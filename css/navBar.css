@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #333; /* Añadido: color de fondo */
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* Añadido: fijar la barra en la parte superior */
+    top: 0; /* Añadido: posición en la parte superior */
+    z-index: 1000; /* Añadido: asegurar que la barra esté por encima de otros elementos */
+}
+
+.navbar ul {
+    list-style: none;
+    margin-right: 20px; /* Ajuste: separación en el extremo derecho */
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-left: 20px; /* Ajuste: separación entre elementos */
+    position: relative;
+}
+
+.navbar ul li:first-child {
+    margin-left: 0; /* Ajuste: elimina el margen izquierdo del primer elemento */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.banner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("ciudad.jpg"); /* Reemplaza "tu-imagen.jpg" con la ruta de tu imagen */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
